@@ -1,3 +1,4 @@
+import "../styles/global.css";
 import React from 'react';
 import Navigation from '../components/navigation';
 import AboutUsLayout from './about-us/layout';

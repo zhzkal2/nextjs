@@ -5,7 +5,6 @@ import { API_URL } from '../app/(home)/page';
 async function getVideo(id: string) {
     console.log(`Fetching moives: ${Date.now()}`)
     await new Promise((resolve) => setTimeout(resolve, 5000));
-    throw new Error("Error in fetching video");
     const response = await fetch(`${API_URL}/${id}/videos`);
     return response.json();
 }
