@@ -1,5 +1,5 @@
 import React from 'react';
-import { API_URL } from '../app/(home)/page';
+import API_URL from '../app/(home)/page';
 
 
 async function getVideo(id: string) {

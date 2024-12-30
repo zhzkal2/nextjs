@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import Movie from "../../components/movie";
 import style from "../../styles/home.module.css";
+import { API_URL } from '../../app/config';
+
 
 export const metadata = {
     title: "Home",
@@ -10,12 +12,12 @@ export const metadata = {
 };
 
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL!;
+
 
 
 async function getMovies() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    const response = await fetch(API_URL);
+    const response = await fetch(`${API_URL}`);
     const json = await response.json();
     return json;
 }
