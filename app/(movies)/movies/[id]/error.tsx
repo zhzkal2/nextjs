@@ -2,5 +2,5 @@
 import React from 'react';
 
 export default function ErrorOMG() {
-    return <h1>OMG an error</h1 >;
+    return <h1>lol something broke....</h1>;
 }
