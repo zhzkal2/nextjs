@@ -7,7 +7,7 @@ type IParams = Promise<{
     id: string;
 }>;
 
-//뭐징?
+
 export async function generateMetadata(props: { params: IParams }) {
     const params = await props.params;
     const id = params.id;

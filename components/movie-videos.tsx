@@ -1,10 +1,11 @@
 import React from 'react';
 import { API_URL } from "../app/constants";
 import styles from "../styles/movie-videos.module.css";
+import axios from 'axios';
 
 async function getVideos(id: string) {
-    const response = await fetch(`${API_URL}/${id}/videos`);
-    return response.json();
+    const response = await axios.get(`${API_URL}/${id}/videos`);
+    return response.data;
 }
 
 export default async function MovieVideos({ id }: { id: string }) {
